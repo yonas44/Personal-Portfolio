@@ -10,7 +10,6 @@
   body {
     width: 375px;
     margin: 0 auto;
-    overflow: hidden;
   }
 
   .head nav {
@@ -38,7 +37,7 @@
     width: 100vw;
   }
 
-  .main h2 {
+  .main .info h2 {
     color: #172b4d;
     width: 327px;
     height: 192px;
@@ -97,5 +96,107 @@
   .icons .scroll img {
     height: 40px;
     width: 40px;
+  }
+
+  .works_main {
+    display: grid;
+    margin: 0 auto;
+    width: 327px;
+    grid-template-rows: 121px 1fr;
+  }
+
+  .works_main .works_heading {
+    height: 151px;
+    padding: 22px 22px 62px 26px;
+  }
+
+  .works_heading .heading {
+    font-size: 40px;
+    height: 97px;
+    text-align: center;
+    line-height: 52px;
+    font-weight: 700;
+    color: #172b4d;
+    padding-bottom: 24px;
+  }
+
+  .works_heading .green_box {
+    margin: 0 auto;
+    width: 48px;
+    height: 4px;
+    border-radius: 24px;
+    background: #36b37e;
+  }
+  .works_main .card1,
+  .card2,
+  .card3,
+  .card4,
+  .card5 {
+    margin-top: 24px;
+    width: 327px;
+    height: 474px;
+    border: 1px solid #d0d9d4;
+    border-radius: 8px;
+  }
+
+  .works_main .card1 {
+    margin-top: 62px;
+  }
+
+  .img_holder {
+    height: 252px;
+    background: lightgray;
+  }
+
+  .text_holder h4 {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 32px;
+    width: 295px;
+    height: 57px;
+    color: #3a4a42;
+    padding: 16px 16px 0 16px;
+  }
+
+  .text_holder ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 305px;
+    height: 32px;
+    padding: 16px 11px 0 11px;
+  }
+
+  .text_holder ul li {
+    background: #ebf0ee;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+    color: #3a4a42;
+    letter-spacing: 0.03em;
+    padding: 8px 12px;
+  }
+
+  .text_holder button {
+    margin: 29px 102px 24px 103px;
+    background: #36b37f;
+    color: white;
+    border-radius: 4px;
+    width: 122px;
+    border: none;
+    height: 48px;
+  }
+
+  .text_holder .btn:active {
+    background: #008552;
+  }
+  .text_holder button:enabled {
+    background: #36b37f;
+  }
+  .text_holder button:hover {
+    background: #36b37f;
+    box-shadow: 0px 8px 16px rgba(54, 179, 127, 0.24);
   }
 }
