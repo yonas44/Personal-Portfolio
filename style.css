@@ -6,13 +6,13 @@
   font-family: 'Inter', sans-serif;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 375px) {
   body {
     width: 375px;
     margin: 0 auto;
   }
 
-  .head nav {
+  .head .nav {
     margin-top: 44px;
     display: flex;
     padding: 10px 35px 0 24px;
@@ -20,7 +20,7 @@
     justify-content: space-between;
   }
 
-  .head nav a {
+  .head .nav a {
     font-size: 20px;
     text-decoration: none;
     color: black;
@@ -127,6 +127,7 @@
     border-radius: 24px;
     background: #36b37e;
   }
+
   .works_main .card1,
   .card2,
   .card3,
@@ -145,7 +146,8 @@
 
   .img_holder {
     height: 252px;
-    background: lightgray;
+    background: url(Icons/picture/space-tourism.jpg);
+    background-size: cover;
   }
 
   .text_holder h4 {
@@ -159,7 +161,7 @@
     padding: 16px 16px 0 16px;
   }
 
-  .text_holder ul {
+  .card .text_holder ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -179,7 +181,7 @@
     padding: 8px 12px;
   }
 
-  .text_holder button {
+  .text_holder .btn {
     margin: 29px 102px 24px 103px;
     background: #36b37f;
     color: white;
@@ -189,14 +191,124 @@
     height: 48px;
   }
 
+  .works_main .card .btn a {
+    color: white;
+    text-decoration: none;
+  }
+
   .text_holder .btn:active {
+    color: white;
     background: #008552;
   }
+
   .text_holder button:enabled {
     background: #36b37f;
   }
+
   .text_holder button:hover {
     background: #36b37f;
-    box-shadow: 0px 8px 16px rgba(54, 179, 127, 0.24);
+    box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+  }
+
+  .aboutMe {
+    height: 1625px;
+    display: grid;
+    grid-template-rows: 392px repeat(3, 352px);
+    gap: 59px;
+    position: relative;
+    background: url(Icons/picture/illustration-\ about\ me-\ mobile.svg);
+    background-repeat: no-repeat;
+  }
+
+  .aboutMe .info_me {
+    margin: 64px 12px 0 12px;
+    height: 333px;
+  }
+
+  .aboutMe .info_me h2 {
+    font-weight: 700;
+    text-align: center;
+    color: #172b4d;
+    font-size: 40px;
+    padding: 24px 0;
+    line-height: 52px;
+  }
+
+  .info_me p {
+    font-weight: 400;
+    height: 189px;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    color: #42526e;
+  }
+
+  .info_me #float {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .aboutMe .info_me .btn {
+    height: 48px;
+    width: 159px;
+    color: white;
+    text-align: center;
+    background: #36b37f;
+    border: none;
+    font-size: 17px;
+    display: block;
+    line-height: 24px;
+    margin: 0 auto;
+    font-weight: 500;
+    border-radius: 4px;
+  }
+
+  .cards {
+    background: #ebf0ee;
+    width: 327px;
+    height: 352px;
+    border-radius: 8px;
+    margin: 0 auto;
+    border: 1px solid #c1c7d0;
+    padding-top: 35px;
+  }
+
+  .aboutMe .cards img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .cards h3 {
+    margin: 16px 0 24px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    color: #344563;
+  }
+
+  .aboutMe .cards ul {
+    list-style: none;
+    width: 271px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-self: center;
+  }
+
+  .cards ul li {
+    background: white;
+    color: #36b37e;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    margin: 4px auto;
+    align-self: center;
+    letter-spacing: 0.03em;
   }
 }
