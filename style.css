@@ -73,8 +73,27 @@
   padding: 64px 24px;
 }
 
-.main h2 span {
+#name {
+  animation: float-down 3s forwards;
+  animation-delay: 0.5s;
+  position: relative;
+  opacity: 0;
+  top: -200px;
+}
+
+#position {
   color: #36b37e;
+  animation: float-down 3s forwards;
+  position: relative;
+  opacity: 0;
+  top: -200px;
+}
+
+@keyframes float-down {
+  100% {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 .main p {
@@ -154,7 +173,7 @@
 }
 
 .card {
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .card:hover {
