@@ -26,6 +26,8 @@ LinkedIn. Cheers! **
 
 ### Deployment
 
+[Live Demo Link](https://yonas44.github.io/Personal-Portfolio/)
+
 ## Authors
 
 👤 **Author1**
