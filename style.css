@@ -51,7 +51,7 @@
   text-decoration: none;
   color: #344563;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 20px;
   line-height: 20px;
 }
 
@@ -67,13 +67,16 @@
   color: #172b4d;
   height: 192px;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 35px;
   text-align: center;
   line-height: 52px;
   padding: 64px 24px;
 }
 
 #name {
+  text-align: center;
+  font-weight: 700;
+  font-size: 60px;
   animation: float-down 3s forwards;
   animation-delay: 0.5s;
   position: relative;
@@ -288,7 +291,7 @@
   height: 333px;
 }
 
-.aboutMe .info_me h2 {
+.aboutMe .info_me h1 {
   font-weight: 700;
   text-align: center;
   color: #172b4d;
@@ -304,6 +307,7 @@
   line-height: 32px;
   text-align: center;
   color: #42526e;
+  margin-bottom: 25px;
 }
 
 .info_me #float {
