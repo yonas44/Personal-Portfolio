@@ -11,13 +11,22 @@
     <header class="head">
       <nav class="mobile-nav">
         <a href="#">Welcome</a>
-        <img src="./Icons/Unionburger_icon.png" alt="Nav toggle" />
+        <img
+          src="./Icons/Unionburger_icon.png"
+          alt="Nav toggle"
+          class="burger-menu"
+        />
       </nav>
-      <nav class="desktop-nav">
-        <ul>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#aboutMe">About</a></li>
-          <li><a href="#footer">Contact</a></li>
+      <nav class="desktop-nav items-mobile-nav">
+        <ul class="menu_list">
+          <li class="list-img">
+            <img src="Icons/burger-X.png" alt="Close menu" class="close-menu" />
+          </li>
+          <li class="nav-home"><a class="list_link" href="#">Portfolio</a></li>
+          <li class="nav-aboutme">
+            <a class="list_link" href="#aboutMe">About</a>
+          </li>
+          <li class="nav-footer"><a class="list" href="#footer">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -340,5 +349,6 @@
         id="footer-img"
       />
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>

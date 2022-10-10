@@ -9,12 +9,22 @@
 
 /* mobile-nav */
 
-.head .mobile-nav {
-  margin-top: 44px;
+.head {
+  width: 100vw;
+  height: 50px;
   display: flex;
-  padding: 10px 35px 0 24px;
+  justify-content: center;
+}
+
+.head .mobile-nav {
+  background: white;
+  display: flex;
+  z-index: 4;
+  padding: 20px 20px;
+  width: 90vw;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
 }
 
 .mobile-nav a {
@@ -55,28 +65,59 @@
   line-height: 20px;
 }
 
+.head .open {
+  display: block;
+  background: #e5e5e5;
+  height: 100vh;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+  z-index: 5;
+}
+
+.head .mobile_menu_list {
+  display: flex;
+  padding: 55px 20px;
+  align-items: baseline;
+  height: 200px;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.head .list-img {
+  display: block;
+  margin-left: auto;
+}
+
+.head .close-menu {
+  display: none;
+}
+
+.head .toggle {
+  display: block;
+  float: right;
+}
+
 /* Headline-section */
 
 .main {
   background: url(./Icons/header-illsutration-mobile@2x.png);
   background-size: cover;
-  height: 100%;
 }
 
 .main .info h2 {
   color: #172b4d;
-  height: 192px;
   font-weight: 700;
   font-size: 35px;
   text-align: center;
   line-height: 52px;
-  padding: 64px 24px;
+  padding: 0 24px 64px 24px;
 }
 
 #name {
   text-align: center;
   font-weight: 700;
-  font-size: 60px;
+  margin-top: 64px;
+  font-size: 40px;
   animation: float-down 3s forwards;
   animation-delay: 0.5s;
   position: relative;
@@ -485,12 +526,23 @@ footer #bottom-pics {
 
 @media screen and (min-width: 768px) {
   /* Desktop-nav */
+  .head {
+    margin: 0;
+  }
+
   .head .mobile-nav {
     display: none;
   }
 
   .head .desktop-nav {
+    background: white;
+    z-index: 3;
+    margin: 0;
     display: block;
+  }
+
+  .head .list-img {
+    display: none;
   }
 
   /* Headline-section-Desktop */
@@ -507,7 +559,7 @@ footer #bottom-pics {
 
   .contents {
     margin: 0 auto;
-    padding: 160px 0;
+    padding: 140px 0;
     box-sizing: border-box;
     width: 50%;
     height: 756px;
@@ -519,6 +571,11 @@ footer #bottom-pics {
     font-size: 48px;
     line-height: 70px;
     height: inherit;
+  }
+
+  #name {
+    margin-top: 0;
+    font-size: 60px;
   }
 
   .main p {
