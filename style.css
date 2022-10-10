@@ -55,6 +55,30 @@
   line-height: 20px;
 }
 
+.head .open {
+  display: block;
+  background: white;
+  height: 100vh;
+  z-index: 5;
+}
+
+.head .mobile_menu_list {
+  display: flex;
+  padding: 20px;
+  align-items: baseline;
+  height: 300px;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.head .close-menu {
+  display: none;
+}
+
+.head .toggle {
+  display: block;
+}
+
 /* Headline-section */
 
 .main {
