@@ -11,7 +11,6 @@
 
 .head {
   width: 100vw;
-  margin: 44px auto;
   height: 50px;
   display: flex;
   justify-content: center;
@@ -69,7 +68,7 @@
 .head .open {
   display: block;
   background: #e5e5e5;
-  height: 755px;
+  height: 100vh;
   border-bottom-left-radius: 35px;
   border-bottom-right-radius: 35px;
   z-index: 5;
