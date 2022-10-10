@@ -1,21 +1,27 @@
-'use strict';
+// 'use strict';
 
-const burger_open = document.querySelector('.burger-menu');
-const mobile_menu = document.querySelector('.desktop-nav');
-const menu_list = document.querySelector('.menu_list');
-const burger_close = document.querySelector('.close-menu');
-const nav_home = document.querySelector('.nav-home');
-const nav_aboutme = document.querySelector('.nav-aboutme');
-const nav_footer = document.querySelector('.nav-footer');
+const burgerOpen = document.querySelector('.burger-menu');
+const mobileMenu = document.querySelector('.desktop-nav');
+const menuList = document.querySelector('.menu_list');
+const burgerClose = document.querySelector('.close-menu');
+const navHome = document.querySelector('.nav-home');
+const navAboutme = document.querySelector('.nav-aboutme');
+const navFooter = document.querySelector('.nav-footer');
 
-nav_home.addEventListener('click', close_menu);
-nav_aboutme.addEventListener('click', close_menu);
-nav_footer.addEventListener('click', close_menu);
-burger_open.addEventListener('click', close_menu);
-burger_close.addEventListener('click', close_menu);
-
-function close_menu() {
-  menu_list.classList.toggle('mobile_menu_list');
-  mobile_menu.classList.toggle('open');
-  burger_close.classList.toggle('toggle');
+function burgerMenu() {
+  menuList.classList.toggle('mobile_menu_list');
+  mobileMenu.classList.toggle('open');
+  burgerClose.classList.toggle('toggle');
 }
+
+function closeMenu() {
+  menuList.classList.remove('mobile_menu_list');
+  mobileMenu.classList.remove('open');
+  burgerClose.classList.remove('toggle');
+}
+
+navHome.addEventListener('click', closeMenu);
+navAboutme.addEventListener('click', closeMenu);
+navFooter.addEventListener('click', closeMenu);
+burgerOpen.addEventListener('click', burgerMenu);
+burgerClose.addEventListener('click', burgerMenu);
