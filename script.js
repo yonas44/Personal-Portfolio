@@ -1,5 +1,13 @@
 // 'use strict';
 
+const cardContainer = [
+  {
+    title: 'Keeping track of hundreds of components',
+    languages: ['Ruby on Rails', 'css', 'JavaScript'],
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci atque porro laborum voluptatum? In quibusdam reiciendis magnam eaque hic, distinctio, error unde quidem consequatur inventore veniam vel doloribus accusamus impedit'
+  }
+]
+
 const burgerOpen = document.querySelector('.burger-menu');
 const mobileMenu = document.querySelector('.desktop-nav');
 const menuList = document.querySelector('.menu_list');
