@@ -3,8 +3,15 @@
 const cardContainer = [
   {
     image: './Icons/picture/modal_picture.png',
-    title: 'First Project',
-    languages: ['Ruby on Rails', 'css', 'JavaScript'],
+    title: 'Keeping track of hundreds of components',
+    languages: [
+      'Codekit',
+      'Github',
+      'JavaScript',
+      'Bootstrap',
+      'Terminal',
+      'Codepen',
+    ],
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci atque porro laborum voluptatum? In quibusdam reiciendis magnam eaque hic, distinctio, error unde quidem consequatur inventore veniam vel doloribus accusamus impedit',
     liveLink: 'https://yonas44.github.io/space-tourism-website/',
     sourceLink: 'https://github.com/yonas44/space-tourism-website',
@@ -44,7 +51,7 @@ const cardContainer = [
   {
     image: 'Icons/picture/space-tourism.jpg',
     title: 'Sixth Project',
-    languages: ['Ruby on Rails', 'css', 'JavaScript', 'html'],
+    languages: ['Ruby on Rails', 'css', 'JavaScript'],
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci atque porro laborum voluptatum? In quibusdam reiciendis magnam eaque hic, distinctio, error unde quidem consequatur inventore veniam vel doloribus accusamus impedit',
     liveLink: 'https://yonas44.github.io/space-tourism-website/',
     sourceLink: 'https://github.com/yonas44/space-tourism-website',
@@ -60,28 +67,35 @@ const navAboutme = document.querySelector('.nav-aboutme');
 const navFooter = document.querySelector('.nav-footer');
 const modal = document.querySelector('.modal');
 const modalClose = document.querySelector('#modal_close');
+const deskModalClose = document.querySelector('#desk-modal-x');
 const modalPicture = document.querySelector('.modal_picture');
 const modalH1 = document.querySelector('.modal_h1');
 const modalList = document.querySelector('.modal_list');
 const modalPar = document.querySelector('.modal_p');
+const modalBtn = document.querySelector('.btn');
 
-modalClose.addEventListener('click', function () {
+function closeModal() {
   modal.classList.remove('popup');
-});
+}
+
+deskModalClose.addEventListener('click', closeModal);
+modalClose.addEventListener('click', closeModal);
 
 function displayModal(cardNumber) {
   modal.classList.add('popup');
-  let card = cardContainer[cardNumber];
+  const card = cardContainer[cardNumber];
   modalH1.textContent = card.title;
+  modalPar.textContent = card.text;
   modalPicture.style.backgroundImage = `url(${card.image})`;
 
   while (modalList.hasChildNodes()) {
     modalList.removeChild(modalList.firstChild);
   }
-  card.languages.map(lang => {
-    let language = document.createElement('li');
+  card.languages.map((lang) => {
+    const language = document.createElement('li');
     language.innerHTML = lang;
     modalList.appendChild(language);
+    return '';
   });
 }
 
@@ -97,6 +111,7 @@ function closeMenu() {
   burgerClose.classList.remove('toggle');
 }
 
+modalBtn.addEventListener('click', displayModal);
 navHome.addEventListener('click', closeMenu);
 navAboutme.addEventListener('click', closeMenu);
 navFooter.addEventListener('click', closeMenu);
