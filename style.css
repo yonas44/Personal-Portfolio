@@ -183,6 +183,11 @@
 .icons .scroll img {
   height: 40px;
   width: 40px;
+  transition: 0.2s;
+}
+
+#scroll_image:hover {
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.1);
 }
 
 /* Works-section */
@@ -241,9 +246,11 @@
 
 .img_holder {
   height: 252px;
-  background: url(Icons/picture/space-tourism.jpg);
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
+}
+
+#card_image {
+  width: 100%;
 }
 
 .text_holder h4 {
@@ -251,7 +258,6 @@
   text-align: center;
   font-weight: 600;
   line-height: 32px;
-  height: 57px;
   color: #3a4a42;
   padding: 16px 16px 0 16px;
 }
@@ -594,6 +600,10 @@ footer #bottom-pics {
 #modal_close {
   cursor: pointer;
   position: absolute;
+  width: 20px;
+  background: white;
+  border-radius: 50%;
+  padding: 10px;
   right: 7%;
   top: 10%;
   float: right;
@@ -654,6 +664,11 @@ footer #bottom-pics {
 @media screen and (min-width: 768px) {
   .modal .modal_child {
     width: 90%;
+    padding-bottom: 44px;
+  }
+
+  .modal_picture {
+    height: 416px;
   }
 }
 
