@@ -256,7 +256,8 @@
   padding: 16px 16px 0 16px;
 }
 
-.text_holder ul {
+.text_holder ul,
+.modal_list {
   list-style: none;
   display: flex;
   height: 32px;
@@ -264,7 +265,8 @@
   justify-content: center;
 }
 
-.text_holder li {
+.text_holder li,
+.modal_list li {
   background: #ebf0ee;
   border-radius: 4px;
   margin-right: 10px;
@@ -521,7 +523,103 @@ footer #bottom-pics {
   left: -14%;
   z-index: -1;
   margin-bottom: 72px;
+  display: none;
   width: 100vw;
+}
+
+.modal {
+  width: 100vw;
+  height: 100%;
+  background: rgb(193, 202, 216, 0.9);
+  position: fixed;
+  top: 0;
+  z-index: 6;
+  display: none;
+  transition: 0.3s ease-out;
+}
+
+.popup {
+  display: block;
+}
+
+.modal .modal_child {
+  background: white;
+  margin: 20px auto;
+  box-sizing: border-box;
+  padding: 16px;
+  border-radius: 10px;
+  width: 90%;
+  display: grid;
+  gap: 12px;
+  grid-template-rows: 220px;
+  height: 836px;
+}
+
+.modal_picture {
+  position: relative;
+  background: url(./Icons/picture/modal_picture.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 7px;
+  background-repeat: no-repeat;
+}
+
+#modal_close {
+  position: absolute;
+  right: 7%;
+  top: 10%;
+  float: right;
+}
+
+.modal_h1 {
+  font-weight: 600;
+  font-size: 32px;
+  margin: auto 0;
+  color: #172b4d;
+  line-height: 44px;
+}
+
+.modal_list {
+  padding: 0;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.modal_list li {
+  padding: 10px;
+}
+
+.modal_p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #344563;
+}
+
+.modal_btn_div {
+  display: grid;
+  gap: 12px;
+  box-sizing: border-box;
+  grid-template-columns: 9fr 10fr;
+}
+
+.modal_btn {
+  padding: 0 16px;
+  display: flex;
+  border-radius: 5px;
+  background: #36b37f;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#modal_link {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: white;
 }
 
 @media screen and (min-width: 768px) {
@@ -690,6 +788,10 @@ footer #bottom-pics {
 
   #footer-img {
     display: none;
+  }
+
+  footer #bottom-pics {
+    display: block;
   }
 
   form {

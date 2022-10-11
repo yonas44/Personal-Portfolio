@@ -106,11 +106,7 @@
               <li>JavaScript</li>
               <li>html</li>
             </ul>
-            <button class="btn">
-              <a href="https://github.com/yonas44/space-tourism-website"
-                >See Project</a
-              >
-            </button>
+            <button onclick="displayModal(0)" class="btn">See Project</button>
           </div>
         </div>
         <div class="card2 card">
@@ -123,11 +119,7 @@
               <li>JavaScript</li>
               <li>html</li>
             </ul>
-            <button class="btn">
-              <a href="https://github.com/yonas44/space-tourism-website"
-                >See Project</a
-              >
-            </button>
+            <button onclick="displayModal(1)" class="btn">See Project</button>
           </div>
         </div>
         <div class="card3 card">
@@ -140,14 +132,10 @@
               <li>JavaScript</li>
               <li>html</li>
             </ul>
-            <button class="btn">
-              <a href="https://github.com/yonas44/space-tourism-website"
-                >See Project</a
-              >
-            </button>
+            <button onclick="displayModal(2)" class="btn">See Project</button>
           </div>
         </div>
-        <div class="card4 card">
+        <div onclick="displayModal(3)" class="card4 card">
           <div class="img_holder"></div>
           <div class="text_holder">
             <h4>Multi-Post Stories Gain+Glory</h4>
@@ -157,14 +145,10 @@
               <li>JavaScript</li>
               <li>html</li>
             </ul>
-            <button class="btn">
-              <a href="https://github.com/yonas44/space-tourism-website"
-                >See Project</a
-              >
-            </button>
+            <button class="btn">See Project</button>
           </div>
         </div>
-        <div class="card5 card">
+        <div onclick="displayModal(4)" class="card5 card">
           <div class="img_holder"></div>
           <div class="text_holder">
             <h4>Multi-Post Stories Gain+Glory</h4>
@@ -174,14 +158,10 @@
               <li>JavaScript</li>
               <li>html</li>
             </ul>
-            <button class="btn">
-              <a href="https://github.com/yonas44/space-tourism-website"
-                >See Project</a
-              >
-            </button>
+            <button class="btn">See Project</button>
           </div>
         </div>
-        <div class="card5 card">
+        <div onclick="displayModal(5)" class="card5 card">
           <div class="img_holder"></div>
           <div class="text_holder">
             <h4>Multi-Post Stories Gain+Glory</h4>
@@ -191,11 +171,7 @@
               <li>JavaScript</li>
               <li>html</li>
             </ul>
-            <button class="btn">
-              <a href="https://github.com/yonas44/space-tourism-website"
-                >See Project</a
-              >
-            </button>
+            <button class="btn">See Project</button>
           </div>
         </div>
       </div>
@@ -349,6 +325,53 @@
         id="footer-img"
       />
     </footer>
+    <div class="modal">
+      <div class="modal_child">
+        <div class="modal_picture">
+          <img
+            src="./Icons/modal_close.png"
+            alt="close button"
+            id="modal_close"
+          />
+        </div>
+        <h1 class="modal_h1">Keeping track of hundreds of components</h1>
+        <ul class="modal_list">
+          <li>Ruby on rails</li>
+          <li>css</li>
+          <li>JavaScript</li>
+        </ul>
+        <p class="modal_p">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+          iusto odio deleniti tenetur sunt atque beatae possimus impedit non,
+          eius adipisci? Inventore at, ducimus quo expedita distinctio
+          laboriosam ut consectetur modi, repellat qui recusandae corporis
+          voluptatibus debitis perspiciatis dolore vero cum ex molestias,
+          suscipit temporibus saepe. Reprehenderit quis voluptatibus
+          repudiandae.
+        </p>
+        <div class="modal_btn_div">
+          <div class="modal_btn">
+            <a
+              id="modal_link"
+              href="https://yonas44.github.io/space-tourism-website/"
+              >See Live</a
+            >
+            <img src="./Icons/see live icon.png" alt="see live icon" />
+          </div>
+          <div class="modal_btn">
+            <a
+              id="modal_link"
+              href="https://github.com/yonas44/space-tourism-website"
+              >See Source</a
+            >
+            <img
+              src="./Icons/social media icons/white-gh.png"
+              alt="see live icon"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>
