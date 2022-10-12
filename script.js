@@ -55,6 +55,7 @@ const cardContainer = [
   },
 ];
 
+// Navigation menu
 const burgerOpen = document.querySelector('.burger-menu');
 const mobileMenu = document.querySelector('.desktop-nav');
 const menuList = document.querySelector('.menu_list');
@@ -62,6 +63,8 @@ const burgerClose = document.querySelector('.close-menu');
 const navHome = document.querySelector('.nav-home');
 const navAboutme = document.querySelector('.nav-aboutme');
 const navFooter = document.querySelector('.nav-footer');
+
+// Modal elements
 const modal = document.querySelector('.modal');
 const modalClose = document.querySelector('#modal_close');
 const deskModalClose = document.querySelector('#desk-modal-x');
@@ -101,6 +104,8 @@ function displayModal(cardNumber) {
   link2.setAttribute('href', card.Links[1]);
 }
 
+// Navigation functions
+
 function burgerMenu() {
   menuList.classList.toggle('mobile_menu_list');
   mobileMenu.classList.toggle('open');
@@ -119,3 +124,38 @@ navAboutme.addEventListener('click', closeMenu);
 navFooter.addEventListener('click', closeMenu);
 burgerOpen.addEventListener('click', burgerMenu);
 burgerClose.addEventListener('click', burgerMenu);
+
+// Validation
+
+const email = document.getElementById('email');
+const contactForm = document.querySelector('#form');
+const footerSpan = document.querySelector('#footer-span');
+let emailValue = '';
+
+function validator(event) {
+  if (event.data !== null) {
+    if (event.data.toLowerCase() !== event.data) {
+      footerSpan.textContent = 'Please use LOWERCASE letters, Thanks!';
+      footerSpan.style.display = 'block';
+    } else if (email.validity.typeMismatch) {
+      footerSpan.textContent = 'please type a valid Email here!';
+      footerSpan.style.display = 'block';
+    } else {
+      footerSpan.textContent = '';
+    }
+  } else if (event.data === null) footerSpan.style.display = 'none';
+}
+
+email.addEventListener('input', (event) => {
+  footerSpan.style.display = 'none';
+  validator(event);
+});
+
+contactForm.addEventListener('submit', (event) => {
+  emailValue = email.value;
+  if (emailValue.toLowerCase() !== emailValue) {
+    footerSpan.textContent = 'Form NOT SENT, Please use LOWERCASE letters on email, Thanks!';
+    footerSpan.style.display = 'block';
+    event.preventDefault();
+  }
+});

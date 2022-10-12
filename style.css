@@ -478,18 +478,42 @@ textarea::placeholder {
   color: #091e42;
 }
 
+.span_div {
+  position: relative;
+}
+
 input[type='submit'] {
   background-color: #36b37f;
   border-radius: 4px;
   padding: 12px;
   color: #fff;
   border: none;
-  display: block;
+  display: inline-block;
   margin: 0 auto;
   font-weight: 500;
+  position: relative;
   font-size: 17px;
   line-height: 24px;
   letter-spacing: 0.03em;
+}
+
+#footer-span {
+  margin: 10px auto;
+  max-width: 150px;
+  display: none;
+  padding: 10px;
+  color: white;
+  scale: 0;
+  animation: open 0.5s forwards;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: red;
+}
+
+@keyframes open {
+  100% {
+    scale: 1;
+  }
 }
 
 .footer #form-btn:hover {
@@ -850,6 +874,16 @@ footer #bottom-pics {
 
   input[type='submit'] {
     margin: 0 30px;
+    display: inline;
+    float: left;
+  }
+
+  #footer-span {
+    border-top-right-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 180px;
+    margin: 0;
   }
 
   #footer-email {
