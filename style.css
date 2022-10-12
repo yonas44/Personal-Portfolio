@@ -183,6 +183,11 @@
 .icons .scroll img {
   height: 40px;
   width: 40px;
+  transition: 0.2s;
+}
+
+#scroll_image:hover {
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.1);
 }
 
 /* Works-section */
@@ -241,9 +246,11 @@
 
 .img_holder {
   height: 252px;
-  background: url(Icons/picture/space-tourism.jpg);
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
+}
+
+#card_image {
+  width: 100%;
 }
 
 .text_holder h4 {
@@ -251,12 +258,12 @@
   text-align: center;
   font-weight: 600;
   line-height: 32px;
-  height: 57px;
   color: #3a4a42;
   padding: 16px 16px 0 16px;
 }
 
-.text_holder ul {
+.text_holder ul,
+.modal_list {
   list-style: none;
   display: flex;
   height: 32px;
@@ -264,7 +271,8 @@
   justify-content: center;
 }
 
-.text_holder li {
+.text_holder li,
+.modal_list li {
   background: #ebf0ee;
   border-radius: 4px;
   margin-right: 10px;
@@ -278,6 +286,7 @@
 
 .text_holder .btn {
   display: block;
+  cursor: pointer;
   margin: 29px auto;
   background: #36b37f;
   color: white;
@@ -332,7 +341,7 @@
   height: 333px;
 }
 
-.aboutMe .info_me h1 {
+.aboutMe .info_me h2 {
   font-weight: 700;
   text-align: center;
   color: #172b4d;
@@ -521,10 +530,149 @@ footer #bottom-pics {
   left: -14%;
   z-index: -1;
   margin-bottom: 72px;
+  display: none;
   width: 100vw;
 }
 
+.modal {
+  width: 100vw;
+  min-height: 100vh;
+  background: rgb(193, 202, 216, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(10px);
+  overflow: auto;
+  scale: 0;
+  z-index: 6;
+  display: none;
+  animation: popup 0.5s forwards;
+}
+
+@keyframes popup {
+  100% {
+    scale: 1;
+  }
+}
+
+.popup {
+  display: block;
+}
+
+.modal .modal_child {
+  background: white;
+  margin: 20px auto;
+  box-sizing: border-box;
+  padding: 16px;
+  border-radius: 10px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#desk-modal-x {
+  cursor: pointer;
+  display: none;
+  float: right;
+  width: 40px;
+  height: 40px;
+}
+
+.mid_section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.modal_picture {
+  position: relative;
+  border-radius: 7px;
+  height: 250px;
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#modal_close {
+  cursor: pointer;
+  position: absolute;
+  width: 20px;
+  background: white;
+  border-radius: 50%;
+  padding: 10px;
+  right: 7%;
+  top: 10%;
+  float: right;
+}
+
+.modal_h1 {
+  font-weight: 600;
+  margin: auto 0;
+  color: #172b4d;
+  line-height: 44px;
+}
+
+.modal_list {
+  padding: 0;
+  justify-content: left;
+  flex-wrap: wrap;
+  overflow: hidden;
+  gap: 10px;
+}
+
+.modal_list li {
+  padding: 10px;
+}
+
+.modal_p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #344563;
+}
+
+.modal_btn_div {
+  display: grid;
+  gap: 12px;
+  height: 50px;
+  box-sizing: border-box;
+  grid-template-columns: 9fr 10fr;
+}
+
+.modal_btn {
+  padding: 0 16px;
+  display: flex;
+  border-radius: 5px;
+  background: #36b37f;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal_link {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: white;
+}
+
 @media screen and (min-width: 768px) {
+  .modal .modal_child {
+    width: 90%;
+    padding-bottom: 44px;
+  }
+
+  .modal_picture {
+    height: 416px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
   /* Desktop-nav */
   .head {
     margin: 0;
@@ -692,6 +840,10 @@ footer #bottom-pics {
     display: none;
   }
 
+  footer #bottom-pics {
+    display: block;
+  }
+
   form {
     margin: 0;
   }
@@ -721,5 +873,33 @@ footer #bottom-pics {
     height: 72px;
     margin: 0 auto;
     width: 170px;
+  }
+
+  .modal .modal_child {
+    width: 850px;
+    margin-bottom: 50px;
+  }
+
+  #desk-modal-x {
+    display: block;
+  }
+
+  .modal_picture {
+    height: 616px;
+  }
+
+  #modal_close {
+    display: none;
+  }
+
+  .modal_h1 {
+    width: 60%;
+  }
+
+  .modal_btn_div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 50px;
   }
 }

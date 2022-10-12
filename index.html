@@ -86,116 +86,132 @@
           </ul>
         </div>
         <div class="scroll">
-          <img src="Icons/scroll_btn.png" alt="scroll down button" />
+          <a href="#works_main">
+            <img
+              src="Icons/scroll_btn.png"
+              alt="scroll down button"
+              id="scroll_image"
+            />
+          </a>
         </div>
       </div>
     </section>
-    <section class="works_main">
+    <section class="works_main" id="works_main">
       <div class="works_heading">
-        <h1 class="heading">My Recent Works</h1>
+        <h2 class="heading">My Recent Works</h2>
         <div class="green_box"></div>
       </div>
       <div class="cards-holder">
         <div class="card1 card">
-          <div class="img_holder"></div>
+          <div class="img_holder">
+            <img
+              src="./Icons/picture/card0.jpg"
+              alt="card image one"
+              id="card_image"
+            />
+          </div>
           <div class="text_holder">
-            <h4>Multi-Post Stories Gain+Glory</h4>
+            <h4>Medical Illustration Sets</h4>
             <ul>
-              <li>Ruby on rails</li>
-              <li>css</li>
+              <li>Codekit</li>
+              <li>Github</li>
               <li>JavaScript</li>
-              <li>html</li>
+              <li>Bootstrap</li>
             </ul>
-            <button class="btn">
-              <a href="https://github.com/yonas44/space-tourism-website"
-                >See Project</a
-              >
-            </button>
+            <button onclick="displayModal(0)" class="btn">See Project</button>
           </div>
         </div>
         <div class="card2 card">
-          <div class="img_holder"></div>
+          <div class="img_holder">
+            <img
+              src="./Icons/picture/card1.png"
+              alt="card image two"
+              id="card_image"
+            />
+          </div>
           <div class="text_holder">
-            <h4>Multi-Post Stories Gain+Glory</h4>
+            <h4>Tonic</h4>
             <ul>
-              <li>Ruby on rails</li>
+              <li>html</li>
               <li>css</li>
               <li>JavaScript</li>
-              <li>html</li>
             </ul>
-            <button class="btn">
-              <a href="https://github.com/yonas44/space-tourism-website"
-                >See Project</a
-              >
-            </button>
+            <button onclick="displayModal(1)" class="btn">See Project</button>
           </div>
         </div>
         <div class="card3 card">
-          <div class="img_holder"></div>
+          <div class="img_holder">
+            <img
+              src="./Icons/picture/card2.png"
+              alt="card image three"
+              id="card_image"
+            />
+          </div>
           <div class="text_holder">
             <h4>Multi-Post Stories Gain+Glory</h4>
             <ul>
+              <li>html</li>
               <li>Ruby on rails</li>
               <li>css</li>
               <li>JavaScript</li>
-              <li>html</li>
             </ul>
-            <button class="btn">
-              <a href="https://github.com/yonas44/space-tourism-website"
-                >See Project</a
-              >
-            </button>
+            <button onclick="displayModal(2)" class="btn">See Project</button>
           </div>
         </div>
-        <div class="card4 card">
-          <div class="img_holder"></div>
+        <div onclick="displayModal(3)" class="card4 card">
+          <div class="img_holder">
+            <img
+              src="./Icons/picture/card3.png"
+              alt="card image four"
+              id="card_image"
+            />
+          </div>
           <div class="text_holder">
-            <h4>Multi-Post Stories Gain+Glory</h4>
+            <h4>Facebook 360</h4>
             <ul>
+              <li>html</li>
               <li>Ruby on rails</li>
               <li>css</li>
               <li>JavaScript</li>
-              <li>html</li>
             </ul>
-            <button class="btn">
-              <a href="https://github.com/yonas44/space-tourism-website"
-                >See Project</a
-              >
-            </button>
+            <button class="btn">See Project</button>
           </div>
         </div>
-        <div class="card5 card">
-          <div class="img_holder"></div>
+        <div onclick="displayModal(4)" class="card5 card">
+          <div class="img_holder">
+            <img
+              src="./Icons/picture/card4.png"
+              alt="card image five"
+              id="card_image"
+            />
+          </div>
           <div class="text_holder">
-            <h4>Multi-Post Stories Gain+Glory</h4>
+            <h4>Uber Navigation</h4>
             <ul>
+              <li>html</li>
               <li>Ruby on rails</li>
               <li>css</li>
               <li>JavaScript</li>
-              <li>html</li>
             </ul>
-            <button class="btn">
-              <a href="https://github.com/yonas44/space-tourism-website"
-                >See Project</a
-              >
-            </button>
+            <button class="btn">See Project</button>
           </div>
         </div>
-        <div class="card5 card">
-          <div class="img_holder"></div>
+        <div onclick="displayModal(5)" class="card5 card">
+          <div class="img_holder">
+            <img
+              src="./Icons/picture/card5.jpg"
+              alt="card image six"
+              id="card_image"
+            />
+          </div>
           <div class="text_holder">
-            <h4>Multi-Post Stories Gain+Glory</h4>
+            <h4>Space Tourism Website</h4>
             <ul>
-              <li>Ruby on rails</li>
+              <li>html</li>
               <li>css</li>
               <li>JavaScript</li>
-              <li>html</li>
             </ul>
-            <button class="btn">
-              <a href="https://github.com/yonas44/space-tourism-website"
-                >See Project</a
-              >
-            </button>
+            <button class="btn">See Project</button>
           </div>
         </div>
       </div>
@@ -212,7 +228,7 @@
           src="Icons/picture/Mask Group.png"
           alt="Mobile footer background image"
         />
-        <h1>About me</h1>
+        <h2>About me</h2>
         <p>
           I can help you build a product , feature or website Look through some
           of my work and experience! If you like what you see and have a project
@@ -349,6 +365,51 @@
         id="footer-img"
       />
     </footer>
+    <div class="modal">
+      <div class="modal_child">
+        <div>
+          <img
+            src="./Icons/Disabled.svg"
+            alt="desktop modal close"
+            id="desk-modal-x"
+          />
+        </div>
+        <div class="modal_picture">
+          <img src="./Icons/burger-X.png" alt="close button" id="modal_close" />
+        </div>
+        <div class="mid_section">
+          <h3 class="modal_h1">Keeping track of hundreds of components</h3>
+          <ul class="modal_list">
+            <li>Ruby on rails</li>
+            <li>css</li>
+            <li>JavaScript</li>
+          </ul>
+          <p class="modal_p">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it 1960s with the releaLorem Ipsum is simply dummy
+            text of the printing and typesetting industry. Lorem Ipsum has been
+            the industry's standard dummy text ever since the 1500s, when an
+            unknown printer took a galley of type and scrambled it 1960s with
+            the relea repudiandae.
+          </p>
+          <div class="modal_btn_div">
+            <div class="modal_btn">
+              <a class="modal_link" id="link1" href="#">See Live</a>
+              <img src="./Icons/see live icon.png" alt="see live icon" />
+            </div>
+            <div class="modal_btn">
+              <a class="modal_link" id="link2" href="#">See Source</a>
+              <img
+                src="./Icons/social media icons/white-gh.png"
+                alt="see live icon"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>
