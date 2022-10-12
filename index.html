@@ -277,7 +277,7 @@
         chat please get in touch.
       </h2>
       <div class="form-section">
-        <form action="https://formspree.io/f/xbjboqzp" method="post">
+        <form id="form" action="https://formspree.io/f/xbjboqzp" method="post">
           <input
             type="text"
             placeholder="Full name"
@@ -302,7 +302,11 @@
             maxlength="500"
             required
           ></textarea>
-          <input id="form-btn" type="submit" value="Get in touch" />
+          <div class="span_div">
+            <input id="form-btn" type="submit" value="Get in touch" /><span
+              id="footer-span"
+            ></span>
+          </div>
         </form>
         <div class="icon-holder">
           <div class="icons">
