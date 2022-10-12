@@ -13,48 +13,45 @@ const cardContainer = [
       'Codepen',
     ],
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci atque porro laborum voluptatum? In quibusdam reiciendis magnam eaque hic, distinctio, error unde quidem consequatur inventore veniam vel doloribus accusamus impedit',
-    liveLink: 'https://yonas44.github.io/space-tourism-website/',
-    sourceLink: 'https://github.com/yonas44/space-tourism-website',
+    Links: ['#', '#'],
   },
   {
     image: './Icons/picture/card1.png',
     title: 'Tonic',
     languages: ['html', 'css', 'JavaScript'],
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci atque porro laborum voluptatum? In quibusdam reiciendis magnam eaque hic, distinctio, error unde quidem consequatur inventore veniam vel doloribus accusamus impedit',
-    liveLink: 'https://yonas44.github.io/space-tourism-website/',
-    sourceLink: 'https://github.com/yonas44/space-tourism-website',
+    Links: ['#', '#'],
   },
   {
     image: './Icons/picture/card2.png',
     title: 'Multi-Post Stories Gain+Glory',
     languages: ['html', 'Ruby on Rails', 'css', 'JavaScript'],
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci atque porro laborum voluptatum? In quibusdam reiciendis magnam eaque hic, distinctio, error unde quidem consequatur inventore veniam vel doloribus accusamus impedit',
-    liveLink: 'https://yonas44.github.io/space-tourism-website/',
-    sourceLink: 'https://github.com/yonas44/space-tourism-website',
+    Links: ['#', '#'],
   },
   {
     image: './Icons/picture/card3.png',
     title: 'Facebook 360',
     languages: ['html', 'Ruby on Rails', 'css', 'JavaScript'],
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci atque porro laborum voluptatum? In quibusdam reiciendis magnam eaque hic, distinctio, error unde quidem consequatur inventore veniam vel doloribus accusamus impedit',
-    liveLink: 'https://yonas44.github.io/space-tourism-website/',
-    sourceLink: 'https://github.com/yonas44/space-tourism-website',
+    Links: ['#', '#'],
   },
   {
     image: './Icons/picture/card4.png',
     title: 'Uber Navigation',
     languages: ['html', 'Ruby on Rails', 'css', 'JavaScript'],
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci atque porro laborum voluptatum? In quibusdam reiciendis magnam eaque hic, distinctio, error unde quidem consequatur inventore veniam vel doloribus accusamus impedit',
-    liveLink: 'https://yonas44.github.io/space-tourism-website/',
-    sourceLink: 'https://github.com/yonas44/space-tourism-website',
+    Links: ['#', '#'],
   },
   {
     image: './Icons/picture/card5.jpg',
     title: 'Space Tourism Website',
     languages: ['html', 'css', 'JavaScript'],
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci atque porro laborum voluptatum? In quibusdam reiciendis magnam eaque hic, distinctio, error unde quidem consequatur inventore veniam vel doloribus accusamus impedit',
-    liveLink: 'https://yonas44.github.io/space-tourism-website/',
-    sourceLink: 'https://github.com/yonas44/space-tourism-website',
+    Links: [
+      'https://yonas44.github.io/space-tourism-website/',
+      'https://github.com/yonas44/space-tourism-website',
+    ],
   },
 ];
 
@@ -73,6 +70,8 @@ const modalH1 = document.querySelector('.modal_h1');
 const modalList = document.querySelector('.modal_list');
 const modalPar = document.querySelector('.modal_p');
 const modalBtn = document.querySelector('.btn');
+const link1 = document.querySelector('#link1');
+const link2 = document.querySelector('#link2');
 
 function closeModal() {
   modal.classList.remove('popup');
@@ -97,6 +96,9 @@ function displayModal(cardNumber) {
     modalList.appendChild(language);
     return '';
   });
+
+  link1.setAttribute('href', card.Links[0]);
+  link2.setAttribute('href', card.Links[1]);
 }
 
 function burgerMenu() {
