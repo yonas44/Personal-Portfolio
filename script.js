@@ -156,6 +156,6 @@ contactForm.addEventListener('submit', (event) => {
   if (emailValue.toLowerCase() !== emailValue) {
     footerSpan.textContent = 'Form NOT SENT, Please use LOWERCASE letters on email, Thanks!';
     footerSpan.style.display = 'block';
+    event.preventDefault();
   }
-  event.preventDefault();
 });
