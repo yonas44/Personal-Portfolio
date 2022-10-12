@@ -135,13 +135,13 @@ let emailValue = '';
 function validator(event) {
   if (event.data !== null) {
     if (event.data.toLowerCase() !== event.data) {
-      email.setCustomValidity('Please use LOWERCASE letters, Thanks!');
-      email.reportValidity();
+      footerSpan.textContent = 'Please use LOWERCASE letters, Thanks!';
+      footerSpan.style.display = 'block';
     } else if (email.validity.typeMismatch) {
-      email.setCustomValidity('please type a valid Email here!');
-      email.reportValidity();
+      footerSpan.textContent = 'please type a valid Email here!';
+      footerSpan.style.display = 'block';
     } else {
-      email.setCustomValidity('');
+      footerSpan.textContent = '';
     }
   } else if (event.data === null) footerSpan.style.display = 'none';
 }
@@ -154,8 +154,8 @@ email.addEventListener('input', (event) => {
 contactForm.addEventListener('submit', (event) => {
   emailValue = email.value;
   if (emailValue.toLowerCase() !== emailValue) {
-    footerSpan.textContent = 'Form NOT SENT, Please use LOWERCASE letters, Thanks!';
+    footerSpan.textContent = 'Form NOT SENT, Please use LOWERCASE letters on email, Thanks!';
     footerSpan.style.display = 'block';
-    event.preventDefault();
   }
+  event.preventDefault();
 });
