@@ -159,3 +159,43 @@ contactForm.addEventListener('submit', (event) => {
     event.preventDefault();
   }
 });
+
+// Session storage
+
+const sessionObj = {
+  fullName: '',
+  email: '',
+  textArea: '',
+};
+
+const fullName = document.querySelector('#footer-name');
+const textArea = document.querySelector('#message');
+let str;
+
+if (localStorage.test === undefined) {
+  localStorage.setItem('test', JSON.stringify(sessionObj));
+}
+const testValue = localStorage.getItem('test');
+const testValueObj = JSON.parse(testValue);
+fullName.value = testValueObj.fullName;
+email.value = testValueObj.email;
+textArea.value = testValueObj.textArea;
+
+function stringifier() {
+  str = JSON.stringify(sessionObj);
+  localStorage.setItem('test', str);
+}
+
+fullName.addEventListener('input', (event) => {
+  sessionObj.fullName = event.target.value;
+  stringifier();
+});
+
+email.addEventListener('input', (event) => {
+  sessionObj.email = event.target.value;
+  stringifier();
+});
+textArea.addEventListener('input', (event) => {
+  sessionObj.textArea = event.target.value;
+  stringifier();
+});
