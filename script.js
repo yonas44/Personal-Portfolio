@@ -127,9 +127,11 @@ burgerClose.addEventListener('click', burgerMenu);
 
 // Validation
 
+const footerName = document.getElementById('footer-name');
 const email = document.getElementById('email');
 const contactForm = document.querySelector('#form');
 const footerSpan = document.querySelector('#footer-span');
+const formReset = document.querySelector('#form-reset');
 let emailValue = '';
 
 function validator(event) {
@@ -143,7 +145,9 @@ function validator(event) {
     } else {
       footerSpan.textContent = '';
     }
-  } else if (event.data === null) footerSpan.style.display = 'none';
+  } else if (event.data === null) {
+    footerSpan.style.display = 'none';
+  }
 }
 
 email.addEventListener('input', (event) => {
@@ -158,4 +162,62 @@ contactForm.addEventListener('submit', (event) => {
     footerSpan.style.display = 'block';
     event.preventDefault();
   }
+});
+
+// Session storage
+
+const sessionObj = {
+  fullName: '',
+  email: '',
+  textArea: '',
+};
+
+const fullName = document.querySelector('#footer-name');
+const textArea = document.querySelector('#message');
+let str;
+
+if (localStorage.test === undefined) {
+  localStorage.setItem('test', JSON.stringify(sessionObj));
+}
+const testValue = localStorage.getItem('test');
+const testValueObj = JSON.parse(testValue);
+fullName.value = testValueObj.fullName;
+email.value = testValueObj.email;
+textArea.value = testValueObj.textArea;
+
+function stringifier() {
+  str = JSON.stringify(sessionObj);
+  localStorage.setItem('test', str);
+}
+
+function displayReset() {
+  if (footerName.value !== '' || email.value !== '' || textArea.value !== '') {
+    formReset.style.display = 'inline-block';
+  } else formReset.style.display = 'none';
+}
+
+formReset.addEventListener('click', () => {
+  formReset.style.display = 'none';
+  footerSpan.style.display = 'none';
+  localStorage.removeItem('test');
+  email.value = '';
+  footerName.value = '';
+  textArea.value = '';
+});
+
+fullName.addEventListener('input', (event) => {
+  sessionObj.fullName = event.target.value;
+  stringifier();
+  displayReset();
+});
+
+email.addEventListener('input', (event) => {
+  sessionObj.email = event.target.value;
+  stringifier();
+  displayReset();
+});
+textArea.addEventListener('input', (event) => {
+  sessionObj.textArea = event.target.value;
+  stringifier();
+  displayReset();
 });
