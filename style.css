@@ -482,6 +482,15 @@ textarea::placeholder {
   position: relative;
 }
 
+#form-reset {
+  background: lightblue;
+  padding: 15px;
+  border: none;
+  margin-left: 15px;
+  display: none;
+  border-radius: 5px;
+}
+
 input[type='submit'] {
   background-color: #36b37f;
   border-radius: 4px;
@@ -873,7 +882,7 @@ footer #bottom-pics {
   }
 
   input[type='submit'] {
-    margin: 0 30px;
+    margin: 0 10px;
     display: inline;
     float: left;
   }
@@ -888,6 +897,17 @@ footer #bottom-pics {
 
   #footer-email {
     display: none;
+  }
+
+  .span_div {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #form-reset {
+    background: lightblue;
+    display: block;
+    margin: 0;
   }
 
   footer .icon-holder {
