@@ -196,6 +196,8 @@ function displayReset() {
   } else formReset.style.display = 'none';
 }
 
+// displayReset();
+
 formReset.addEventListener('click', () => {
   formReset.style.display = 'none';
   footerSpan.style.display = 'none';
