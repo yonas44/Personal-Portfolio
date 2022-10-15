@@ -72,7 +72,7 @@ const modalPicture = document.querySelector('.modal_picture');
 const modalH1 = document.querySelector('.modal_h1');
 const modalList = document.querySelector('.modal_list');
 const modalPar = document.querySelector('.modal_p');
-const modalBtn = document.querySelector('.btn');
+const modalBtn = document.querySelectorAll('.btn');
 const link1 = document.querySelector('#link1');
 const link2 = document.querySelector('#link2');
 
@@ -118,7 +118,9 @@ function closeMenu() {
   burgerClose.classList.remove('toggle');
 }
 
-modalBtn.addEventListener('click', displayModal);
+modalBtn.forEach((btn) => {
+  btn.addEventListener('click', displayModal);
+});
 navHome.addEventListener('click', closeMenu);
 navAboutme.addEventListener('click', closeMenu);
 navFooter.addEventListener('click', closeMenu);
@@ -222,4 +224,42 @@ textArea.addEventListener('input', (event) => {
   sessionObj.textArea = event.target.value;
   stringifier();
   displayReset();
+});
+
+// Duplicate cards in worksection
+
+const cardsHolder = document.querySelector('.cards-holder');
+cardContainer.map((card) => {
+  const cards = document.createElement('div');
+  cards.className = 'card';
+  const imageHolder = document.createElement('div');
+  imageHolder.className = 'img_holder';
+  const cardImage = document.createElement('img');
+  cardImage.id = 'card_image';
+  cardImage.src = card.image;
+  imageHolder.appendChild(cardImage);
+  cards.appendChild(imageHolder);
+  const textHolder = document.createElement('div');
+  textHolder.className = 'text_holder';
+  const h4 = document.createElement('h4');
+  h4.className = 'cardHeading';
+  h4.innerHTML = card.title;
+  textHolder.appendChild(h4);
+  const ul = document.createElement('ul');
+  ul.className = 'cardUl';
+  card.languages.map((lang) => {
+    const language = document.createElement('li');
+    language.innerHTML = lang;
+    ul.appendChild(language);
+    return '';
+  });
+  const cardButton = document.createElement('button');
+  cardButton.className = 'btn';
+  cardButton.setAttribute('onclick', `displayModal(${cardContainer.indexOf(card)})`);
+  cardButton.innerHTML = 'See Project';
+  textHolder.appendChild(ul);
+  textHolder.appendChild(cardButton);
+  cards.appendChild(textHolder);
+  cardsHolder.appendChild(cards);
+  return '';
 });

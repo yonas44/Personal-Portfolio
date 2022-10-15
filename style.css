@@ -62,16 +62,30 @@
   color: #344563;
   font-weight: 600;
   font-size: 20px;
+  transition: all 0.3s;
   line-height: 20px;
+}
+
+.desktop-nav a:hover {
+  font-size: 25px;
+  border-bottom: black 1px solid;
 }
 
 .head .open {
   display: block;
   background: #e5e5e5;
   height: 100vh;
+  animation: smooth 0.5s forwards;
+  scale: 0;
   border-bottom-left-radius: 35px;
   border-bottom-right-radius: 35px;
   z-index: 5;
+}
+
+@keyframes smooth {
+  100% {
+    scale: 1;
+  }
 }
 
 .head .mobile_menu_list {
@@ -221,19 +235,12 @@
   background: #36b37e;
 }
 
-.card {
-  transition: 0.3s;
-}
-
 .card:hover {
   box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
 }
 
-.works_main .card1,
-.card2,
-.card3,
-.card4,
-.card5 {
+.works_main .card {
+  transition: 0.3s;
   margin: 24px auto 0 auto;
   border: 1px solid #d0d9d4;
   border-radius: 8px;
@@ -253,7 +260,7 @@
   width: 100%;
 }
 
-.text_holder h4 {
+.text_holder .cardHeading {
   font-size: 24px;
   text-align: center;
   font-weight: 600;
@@ -262,10 +269,12 @@
   padding: 16px 16px 0 16px;
 }
 
-.text_holder ul,
+.text_holder .cardUl,
 .modal_list {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
   height: 32px;
   padding: 16px 11px 0 11px;
   justify-content: center;
@@ -366,7 +375,7 @@
   top: 0;
 }
 
-.aboutMe .info_me .btn {
+.aboutMe .info_me .resumeBtn {
   height: 48px;
   width: 159px;
   color: white;
@@ -382,12 +391,12 @@
   border-radius: 4px;
 }
 
-.aboutMe .info_me .btn:hover {
+.aboutMe .info_me .resumeBtn:hover {
   background: #36b37f;
   box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
 }
 
-.aboutMe .info_me .btn:active {
+.aboutMe .info_me .resumeBtn:active {
   background: #008552;
 }
 
@@ -720,6 +729,19 @@ footer #bottom-pics {
     z-index: 3;
     margin: 0;
     display: block;
+    height: 72px;
+  }
+
+  .head .mobile_menu_list {
+    margin: 16px auto;
+    text-align: center;
+    height: 40px;
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
   }
 
   .head .list-img {
@@ -795,11 +817,7 @@ footer #bottom-pics {
     padding-bottom: 48px;
   }
 
-  .works_main .card1,
-  .card2,
-  .card3,
-  .card4,
-  .card5 {
+  .works_main .card {
     margin-top: 3%;
     height: inherit;
     min-width: 30%;
@@ -906,7 +924,6 @@ footer #bottom-pics {
 
   #form-reset {
     background: lightblue;
-    display: block;
     margin: 0;
   }
 
