@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 
 const cardContainer = [
   {
@@ -255,7 +255,10 @@ cardContainer.map((card) => {
   });
   const cardButton = document.createElement('button');
   cardButton.className = 'btn';
-  cardButton.setAttribute('onclick', `displayModal(${cardContainer.indexOf(card)})`);
+  cardButton.setAttribute(
+    'onclick',
+    `displayModal(${cardContainer.indexOf(card)})`,
+  );
   cardButton.innerHTML = 'See Project';
   textHolder.appendChild(ul);
   textHolder.appendChild(cardButton);
